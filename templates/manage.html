@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Manage Students & Labs</h3>
+
+<div class="row">
+  <!-- Add Student -->
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>👨‍🎓 Add New Student</h5>
+      </div>
+      <div class="card-body">
+        <form method="post">
+          <input type="hidden" name="action" value="add_student">
+          <div class="mb-3">
+            <label class="form-label">Roll No *</label>
+            <input type="text" name="roll_no" class="form-control" placeholder="e.g., CS001" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Name *</label>
+            <input type="text" name="name" class="form-control" placeholder="Student Name" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" placeholder="student@example.com">
+          </div>
+          <button type="submit" class="btn btn-primary">➕ Add Student</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Lab -->
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>🧪 Add New Lab</h5>
+      </div>
+      <div class="card-body">
+        <form method="post">
+          <input type="hidden" name="action" value="add_lab">
+          <div class="mb-3">
+            <label class="form-label">Lab Name *</label>
+            <input type="text" name="lab_name" class="form-control" placeholder="e.g., Database Fundamentals" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Max Marks</label>
+            <input type="number" name="max_marks" class="form-control" value="100" min="1" max="1000">
+          </div>
+          <button type="submit" class="btn btn-success">➕ Add Lab</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Current Students -->
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h5>👨‍🎓 Current Students ({{ students|length }})</h5>
+    {% if students %}
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>Roll No</th>
+              <th>Name</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for roll_no, name, email in students %}
+            <tr>
+              <td><strong>{{ roll_no }}</strong></td>
+              <td>{{ name }}</td>
+              <td>{{ email or '-' }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    {% else %}
+      <div class="alert alert-info">No students found. Add some students above!</div>
+    {% endif %}
+  </div>
+
+  <!-- Current Labs -->
+  <div class="col-md-6">
+    <h5>🧪 Current Labs ({{ labs|length }})</h5>
+    {% if labs %}
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Lab Name</th>
+              <th>Max Marks</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for lab_id, lab_name, max_marks in labs %}
+            <tr>
+              <td><strong>{{ lab_id }}</strong></td>
+              <td>{{ lab_name }}</td>
+              <td>{{ max_marks }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    {% else %}
+      <div class="alert alert-info">No labs found. Add some labs above!</div>
+    {% endif %}
+  </div>
+</div>
+
+<a class="btn btn-secondary mt-3" href="{{ url_for('index') }}">⬅ Back to Home</a>
+{% endblock %}

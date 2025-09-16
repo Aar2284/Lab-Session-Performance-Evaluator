@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Students</h3>
+<ul class="list-group">
+  {% for roll, name in students %}
+    <li class="list-group-item">📌 {{ roll }} - {{ name }}</li>
+  {% endfor %}
+</ul>
+<a class="btn btn-secondary mt-3" href="{{ url_for('index') }}">⬅ Back</a>
+{% endblock %}

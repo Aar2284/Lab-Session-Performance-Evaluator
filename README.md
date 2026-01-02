@@ -1,8 +1,8 @@
 # Lab-Session-Performance-Evaluator
 
-[![Python Version](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
-[![PL/SQL](https://img.shields.io/badge/PL/SQL-black.svg?logo=oracle&logoColor=red)](https://www.oracle.com/database/technologies/plsql.html)
-[![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)](https://www.w3.org/html/)
+[![Python Badge](https://img.shields.io/badge/Language-Python%203.9-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/downloads/release/python-390/)
+[![HTML Badge](https://img.shields.io/badge/Frontend-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![PL/SQL Badge](https://img.shields.io/badge/Database-PL%2FSQL-F80000?style=for-the-badge&logo=oracle&logoColor=white)](https://www.oracle.com/database/technologies/appdev/plsql.html)
 
 This project is designed to evaluate and manage the performance of students during lab sessions. It provides tools for student management, session analytics, and performance tracking, making it easier for instructors to monitor student progress and generate performance reports.
 

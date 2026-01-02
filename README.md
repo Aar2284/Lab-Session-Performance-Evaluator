@@ -1,16 +1,20 @@
 # Lab-Session-Performance-Evaluator
 
+[![Python Version](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
+[![PL/SQL](https://img.shields.io/badge/PL/SQL-black.svg?logo=oracle&logoColor=red)](https://www.oracle.com/database/technologies/plsql.html)
+[![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)](https://www.w3.org/html/)
+
 This project is designed to evaluate and manage the performance of students during lab sessions. It provides tools for student management, session analytics, and performance tracking, making it easier for instructors to monitor student progress and generate performance reports.
 
 ## 🚀 Features
 
-- Add, update, and remove student records
-- Track student performance across multiple lab sessions
-- Generate analytical reports and performance summaries
-- User-friendly web interface for instructors and students
-- Role-based access (admin/instructor/student)
-- Session management and attendance tracking
-
+- **Student Management**: Easily add, update, and remove student records.
+- **Performance Tracking**: Monitor student performance across multiple lab sessions.
+- **Analytical Reports**: Generate comprehensive performance summaries and analytics.
+- **User-Friendly Interface**: A simple and intuitive web interface for seamless navigation and use.
+- **Role-Based Access**: Secure access control for administrators, instructors, and students.
+- **Session Management**: Efficiently manage lab sessions and track attendance.
+- 
 ## 🗂️ Project Structure
 
 - `index.html` - Main landing page with navigation for student management
@@ -19,9 +23,10 @@ This project is designed to evaluate and manage the performance of students duri
 
 ## 🛠️ Technologies Used
 
-- HTML, CSS, Bootstrap for frontend
-- Python (Flask/Django or similar) for backend logic
-- SQLite/MySQL for database management
+
+- **Frontend**: HTML, CSS, Bootstrap
+- **Backend**: Python (Flask)
+- **Database**: Oracle (PL/SQL)
 
 ## 💾 Installation
 
